@@ -1,0 +1,3 @@
+import { Breadcrumbs, Footer, Header } from '../components/Chrome'; import { BookingForm } from './BookingForm';
+export const metadata={title:'Подобрать психолога — Гармония',description:'Оставьте заявку на бесплатное знакомство и подбор психолога.'};
+export default function BookingPage(){return <><Header/><main className="inner-main"><Breadcrumbs items={[{label:'Подбор специалиста'}]}/><section className="booking-page"><div><span className="section-kicker">20 минут бесплатно</span><h1>Расскажите,<br/><em>что сейчас важно</em></h1><p>Координатор перезвонит, задаст несколько бережных вопросов и предложит 2–3 подходящих специалиста.</p><ul><li>Никаких обязательств</li><li>Конфиденциально</li><li>Онлайн или очно</li></ul></div><BookingForm/></section></main><Footer/></>}
