@@ -4,6 +4,8 @@ import { Cta } from '../../components/Cta';
 import { Breadcrumbs, Footer, Header } from '../../components/Chrome';
 import { specialists } from '../../lib/content';
 
+export function generateStaticParams() { return specialists.map(({ slug }) => ({ slug })); }
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const doctor = specialists.find(item => item.slug === slug); if (!doctor) return {}; return { title: `${doctor.name} — Гармония`, description: `${doctor.role}. ${doctor.experience} опыта. ${doctor.formats}.`, openGraph: { title: `${doctor.name} — Гармония`, description: doctor.quote, images: [] }, twitter: { images: [] } }; }
 
 export default async function SpecialistPage({ params }: { params: Promise<{ slug: string }> }) {

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://zif91.github.io'),
   title: 'Гармония — психологическая клиника',
   description: 'Подбор психолога в Москве и онлайн. Первая короткая встреча бесплатно.',
   openGraph: {
