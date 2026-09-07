@@ -1,3 +1,12 @@
-import { Breadcrumbs, Footer, Header } from '../components/Chrome'; import { BookingForm } from './BookingForm';
-export const metadata={title:'Подобрать психолога — Гармония',description:'Оставьте заявку на бесплатное знакомство и подбор психолога.'};
-export default function BookingPage(){return <><Header/><main className="inner-main"><Breadcrumbs items={[{label:'Подбор специалиста'}]}/><section className="booking-page"><div><span className="section-kicker">20 минут бесплатно</span><h1>Расскажите,<br/><em>что сейчас важно</em></h1><p>Координатор перезвонит, задаст несколько бережных вопросов и предложит 2–3 подходящих специалиста.</p><ul><li>Никаких обязательств</li><li>Конфиденциально</li><li>Онлайн или очно</li></ul></div><BookingForm/></section></main><Footer/></>}
+import { Breadcrumbs, Footer, Header } from '../components/Chrome';
+import { BookingForm } from './BookingForm';
+
+export const metadata = { title: 'Подобрать психолога — Гармония', description: 'Начните с бесплатного разговора о своей ситуации. Поможем подобрать психолога.' };
+export default function BookingPage() {
+  return <><Header /><main id="main" className="inner-main"><Breadcrumbs items={[{ label: 'Подбор психолога' }]} />
+    <section className="booking-page"><div><span className="section-kicker">Первый разговор — бесплатно</span><h1>Расскажите,<br />что сейчас важно</h1>
+      <p>Вам не нужно заранее выбирать метод терапии или знать, какой специалист подходит. Начнём с вашей ситуации, а с выбором поможем.</p>
+      <ul><li>Без обязательств</li><li>Онлайн или очно</li><li>В вашем темпе</li></ul>
+      <div className="booking-assurance"><strong>Что будет после заявки?</strong>Консультант свяжется с вами, уточнит запрос, удобный формат и бюджет. Затем предложит подходящего специалиста и ответит на вопросы.</div>
+    </div><BookingForm /></section></main><Footer /></>;
+}
